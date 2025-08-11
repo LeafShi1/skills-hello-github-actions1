@@ -1,0 +1,20 @@
+name: manual-wokflow-with-parameter
+
+on:
+  workflow_dispatch:
+    inputs:
+       username: 
+          description: 'type your name'
+          required: true
+          default: 'Visitors'
+       environment:
+          description: 'type your envrionment'
+          required: true
+          default: 'dev'
+jobs:
+  greet-user: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: 'Print greeting'
+      - run: echo "Hello ${{github.events.inputs.username}}, you selected environment is ${{github.events.inputs.environment}}"
+
