@@ -1,9 +1,12 @@
+name: manual trigger workflow
+
 on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+  workflow_dispatch: 
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print welcome information
+        run: echo "Hello, this is a manual trigger workflow！"
+
