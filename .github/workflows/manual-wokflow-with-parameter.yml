@@ -15,6 +15,6 @@ jobs:
   greet-user: 
     runs-on: ubuntu-latest
     steps: 
-      - name: 'Print greeting'
-      - run: echo "Hello ${{github.events.inputs.username}}, you selected environment is ${{github.events.inputs.environment}}"
+      - name: Print greeting
+      - run: echo "Hello ${{github.event.inputs.username}}, you selected environment is ${{github.event.inputs.environment}}"
 
