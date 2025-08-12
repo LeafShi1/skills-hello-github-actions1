@@ -12,4 +12,4 @@ jobs:
        - name: "Say Hello world, it's Monday"
          run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
          env:
-           First_name: Mona
+           First_Name: Mona
