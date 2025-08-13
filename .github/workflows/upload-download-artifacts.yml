@@ -30,6 +30,7 @@ jobs:
       with:
         name: webpack artifacts
         path: public/
+        retention-days: 10
   test:
     needs: build
     runs-on: ubuntu-latest
